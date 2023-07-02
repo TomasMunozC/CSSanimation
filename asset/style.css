@@ -72,6 +72,7 @@ body{
     .main{
         grid-area: main;
         background-color: #26292c;
+        color: #FFFFFF;
         width: 85vw;
         display: grid;
         grid-template-columns:auto auto auto;
@@ -171,6 +172,7 @@ body{
     .main{
         grid-area: main;
         background-color: #26292c;
+        color: #ffffff;
         width: 85vw;
         display: grid;
         gap: 15px;
