@@ -1,0 +1,209 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #26292c;
+}
+
+.header img{
+    height: 150px;
+    width: 200px;
+    
+}
+
+@media (min-width: 577px){
+    .gridContainer{
+        display: grid;
+        grid-template-areas:
+        "aside header"
+        "aside main"
+        "footer main";
+    }
+    
+    
+    .header{
+        grid-area: header;
+        background-color: #26292c;
+        color: #FFFFFF;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .aside{
+        grid-area: aside;
+        background-color: #26292c;
+        color: #ffffff;
+        height: 100vh;
+        width: 15vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aside img{
+        height: 100px;
+        width: 100px;
+        animation-name: girar;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes girar {
+    0% {
+        transform: rotateY('0deg');
+    }     
+    25%{
+        transform: rotateY(90deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    75%{
+        transform: rotateY(270deg);
+    } 
+    100% {
+        transform: rotateY(360deg);
+        }
+    }
+    
+    .main{
+        grid-area: main;
+        background-color: #26292c;
+        width: 85vw;
+        display: grid;
+        grid-template-columns:auto auto auto;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .footer{    
+        grid-area: footer;
+        background-color: #26292c;
+        text-align: center;
+        align-items: center;
+        padding-top: 15px;
+        color: white;
+        padding-bottom: 15px;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .card img{
+        height:250px;
+        width: 250px;
+        filter: grayscale(100%);
+        transition: filter 2s;
+    }
+
+    .card img:hover{    
+        filter: grayscale(0%);
+    }
+
+
+}
+
+@media(max-width: 576px)
+{
+    .gridContainer{
+        display: grid;
+        grid-template-areas:
+        "aside"
+        "header"
+        "main"
+        "footer ";
+    }
+    .header{
+        grid-area: header;
+        background-color: #26292c;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .aside{
+        grid-area: aside;
+        background-color: #26292c;
+        color: #ffffff;
+        height: 20vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aside img{
+        height: 50px;
+        width: 50px;
+        padding-left: 20px;
+        padding-top: 20px;
+        animation-name: girar;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes girar {
+        0% {
+            transform: rotateY(0deg);
+        }     
+        25%{
+            transform: rotateY(90deg);
+        }
+        50% {
+            transform: rotateY(180deg);
+        }
+        75%{
+            transform: rotateY(270deg);
+        } 
+        100% {
+            transform: rotateY(360deg);
+            }
+        }
+    
+    .main{
+        grid-area: main;
+        background-color: #26292c;
+        width: 85vw;
+        display: grid;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .footer{    
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        background-color: #26292c;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .card img{
+        height:250px;
+        width: 250px;
+        filter: grayscale(100%);
+        transition: filter 2s;
+    }
+
+    .card img:hover{    
+        filter: grayscale(0%);
+    }
+}
+
+
